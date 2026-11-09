@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hẹn hò lần 2 💌</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim&family=Mali:wght@500;700&display=swap">
+<style>
+:root{--paper:#FBFDFF;--bg:#DCEBFF;--line:#BCD6F7;--ink:#1E3A6B;--pink:#7DB2FF;--hl:#FFE066;--mint:#A9D4FF;--tape:rgba(125,178,255,.65);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#1F2A44;--bg:#111A30;--line:#22315A;--ink:#EAF2FF;--hl:#8a6f1c;--mint:#2d5a96;--pink:#3F7FD6;--tape:rgba(125,178,255,.35);color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#1F2A44;--bg:#111A30;--line:#22315A;--ink:#EAF2FF;--hl:#8a6f1c;--mint:#2d5a96;--pink:#3F7FD6;--tape:rgba(125,178,255,.35);color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;min-height:100vh;padding:40px 16px 56px;display:grid;place-items:start center;color:var(--ink);font-family:Mali,Itim,system-ui,sans-serif;font-weight:500;overflow-x:hidden;background:repeating-linear-gradient(var(--bg) 0 31px,var(--line) 31px 32px)}
+.page{position:relative;z-index:1;width:100%;max-width:500px;background:var(--paper);border:2.5px solid var(--ink);border-radius:255px 18px 225px 18px/18px 225px 18px 255px;padding:40px 24px 32px;text-align:center;transform:rotate(.6deg);box-shadow:5px 6px 0 rgba(30,58,107,.28)}
+.page:before{content:"";position:absolute;top:-16px;left:50%;width:110px;height:30px;margin-left:-55px;background:var(--tape);transform:rotate(3deg)}
+.lvl{position:absolute;top:-14px;right:-6px;background:var(--hl);color:#2F3B55;border:2.5px solid var(--ink);border-radius:10px;padding:4px 12px;font-family:Itim,sans-serif;font-size:1.05rem;transform:rotate(7deg)}
+.cat{font-size:3.8rem;line-height:1;display:inline-block;animation:wig 3s ease-in-out infinite}
+@keyframes wig{50%{transform:rotate(-7deg) translateY(-5px)}}
+h1{font-family:Itim,Mali,sans-serif;font-weight:400;font-size:clamp(2.1rem,9vw,2.9rem);line-height:1.15;margin:6px 0 10px}
+h2{font-family:Itim,Mali,sans-serif;font-weight:400;font-size:1.4rem;margin:24px 0 8px;text-align:left}
+p{margin:0 0 16px;line-height:1.65}
+del{text-decoration-thickness:2px;opacity:.7}
+.hl{background:linear-gradient(transparent 55%,var(--hl) 55%)}
+.bubble{position:relative;min-height:3.8em;margin:14px 6px 0;padding:10px 14px;border:2px solid var(--ink);border-radius:18px;font-size:.95rem;line-height:1.5;background:var(--paper)}
+.bubble:empty{visibility:hidden}
+.bubble:before{content:"";position:absolute;top:-9px;left:50%;margin-left:-8px;width:14px;height:14px;background:var(--paper);border-left:2px solid var(--ink);border-top:2px solid var(--ink);transform:rotate(45deg)}
+.btns{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;align-items:center;min-height:86px;margin-top:6px}
+button{font:inherit;font-weight:700;cursor:pointer;color:#2F3B55;border:2.5px solid var(--ink);border-radius:255px 14px 225px 14px/14px 225px 14px 255px;padding:11px 24px;box-shadow:3px 4px 0 var(--ink);background:#fff}
+button:active{transform:translate(2px,3px);box-shadow:1px 1px 0 var(--ink)}
+button:focus-visible,input:focus-visible{outline:3px dashed var(--ink);outline-offset:3px}
+#yes{background:var(--pink);font-size:1.1rem;transition:font-size .2s,padding .2s}
+#no{font-size:1rem;z-index:5;transition:left .25s,top .25s}
+.recap{list-style:none;margin:0;padding:0;text-align:left;display:grid;gap:8px}
+.recap li{padding-left:30px;position:relative;line-height:1.5}
+.recap li:before{content:"⭐";position:absolute;left:0;top:-1px}
+.win{display:none}
+.acts{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.acts button{display:flex;flex-direction:column;gap:2px;align-items:center;padding:12px 8px;font-size:.95rem;line-height:1.25}
+.acts button span{font-size:1.9rem}
+.acts button small{font-weight:500;font-size:.78rem;opacity:.8}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{font-size:.88rem;padding:7px 12px;box-shadow:2px 3px 0 var(--ink)}
+.on{background:var(--hl)!important;color:#2F3B55}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.row input{font:inherit;font-weight:700;color:var(--ink);background:var(--paper);border:2.5px solid var(--ink);border-radius:12px;padding:8px 10px;flex:1 1 130px;min-width:0}
+.small{font-size:.85rem;opacity:.75;text-align:left;margin:8px 0 0}
+#rand{background:var(--pink);margin-top:14px;font-size:.9rem;padding:8px 16px}
+#lock{background:var(--mint);margin-top:18px;font-size:1.05rem;padding:12px 28px}
+#err{min-height:1.5em;margin:10px 0 0;font-size:.9rem}
+.ticket{display:none;margin-top:20px;border:2.5px dashed var(--ink);border-radius:16px;padding:16px;text-align:left;background:var(--bg);line-height:1.55}
+.ticket h3{font-family:Itim,Mali,sans-serif;font-weight:400;font-size:1.3rem;margin:0 0 6px}
+.ticket .big{font-size:1.05rem}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.actions button{font-size:.9rem;padding:9px 16px}
+.rules{text-align:left;margin:0;padding-left:22px;line-height:1.55}
+.rules li{margin-bottom:6px}
+.sig{font-family:Itim,Mali,sans-serif;font-size:1.4rem;margin:18px 0 0;transform:rotate(-2deg)}
+body.done .ask{display:none}
+body.done .win{display:block}
+.fl{position:fixed;bottom:-40px;opacity:.55;pointer-events:none;z-index:0;animation:up linear forwards}
+@keyframes up{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:50}
+@media (max-width:380px){.acts{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.cat{animation:none}*{transition:none!important}}
+</style>
+</head>
+<body>
+<main class="page">
+  <div class="lvl">LEVEL 2</div>
+
+  <section class="ask">
+    <div class="cat" id="face">😺</div>
+    <p style="margin:6px 0 0">Gửi Anh Dương,</p>
+    <h1>Hẹn hò lần 2 nha?</h1>
+    <p>Lần trước vui hơn mình tưởng. Nên mình xin phép <span class="hl">mở khóa màn 2</span>, lần này bạn được chọn hết: đi đâu, hôm nào, mấy giờ.</p>
+    <div class="btns">
+      <button id="yes" type="button">Màn 2 luôn! 💗</button>
+      <button id="no" type="button">Hông</button>
+    </div>
+    <p id="msg" class="bubble" aria-live="polite"></p>
+
+    <h2>Báo cáo sau buổi hẹn đầu</h2>
+    <ul class="recap">
+      <li>Mức độ vui: cao hơn dự kiến của mình 3 lần.</li>
+      <li>Mức độ ngại: giảm rõ rệt (mình thôi đổ mồ hôi tay rồi).</li>
+      <li>Số lần mình cười ngu: không đếm nổi.</li>
+      <li>Kết luận của hội đồng (là mình): nên có lần hai.</li>
+    </ul>
+  </section>
+
+  <section class="win">
+    <div class="cat">😻</div>
+    <h1>Level 2 unlocked!</h1>
+    <p>Bạn đồng ý rồi nha, mình chụp màn hình lại rồi. Giờ tới lượt bạn làm đạo diễn.</p>
+
+    <h2>1. Mình làm gì nè?</h2>
+    <div class="acts" id="acts">
+      <button type="button" data-a="Cà phê và nói chuyện đến quên giờ"><span>☕</span>Cà phê tám chuyện<small>chill, ngồi lâu cũng được</small></button>
+      <button type="button" data-a="Xem phim rồi ăn gì đó"><span>🎬</span>Xem phim<small>bắp rang là của chung</small></button>
+      <button type="button" data-a="Đi dạo rồi ăn vặt"><span>🌆</span>Đi dạo, ăn vặt<small>vừa đi vừa ăn</small></button>
+      <button type="button" data-a="Đi dạo hóng gió, không cần đích đến"><span>🚶</span>Đi dạo hóng gió<small>không cần đích đến</small></button>
+      <button type="button" data-a="Chơi game hoặc bowling"><span>🎳</span>Chơi game / bowling<small>ai thua mua trà sữa</small></button>
+      <button type="button" data-a="Bất ngờ, mình lo hết"><span>🎁</span>Bất ngờ đi<small>mình tự chọn nha</small></button>
+    </div>
+
+    <h2>2. Hôm nào?</h2>
+    <div class="chips" id="dchips"></div>
+    <div class="row"><input type="date" id="dpick" aria-label="Chọn ngày khác"></div>
+    <p class="small">Chọn nhanh ở trên, hoặc tự chọn ngày khác.</p>
+
+    <h2>3. Mấy giờ?</h2>
+    <div class="chips" id="tchips">
+      <button type="button" data-t="10:00">10h</button>
+      <button type="button" data-t="12:00">12h</button>
+      <button type="button" data-t="14:00">14h</button>
+      <button type="button" data-t="17:00">17h</button>
+      <button type="button" data-t="18:30">18h30</button>
+      <button type="button" data-t="19:00">19h</button>
+      <button type="button" data-t="20:00">20h</button>
+    </div>
+    <div class="row"><input type="time" id="tpick" aria-label="Chọn giờ khác"></div>
+
+    <button id="rand" type="button">🎲 Để mèo chọn hết giùm</button><br>
+    <button id="lock" type="button">Chốt lịch 📌</button>
+    <p id="err" aria-live="polite"></p>
+
+    <div class="ticket" id="ticket" aria-live="polite">
+      <h3>🎟️ Vé hẹn hò lần 2</h3>
+      <div class="big" id="tk"></div>
+      <p id="tj" style="margin:8px 0 0"></p>
+      <div class="actions">
+        <button id="copy" type="button" style="background:var(--pink)">Chép tin nhắn gửi mình 💌</button>
+        <button id="ics" type="button" style="background:var(--hl)">Thêm vào lịch 📅</button>
+      </div>
+      <p id="note" class="small"></p>
+    </div>
+
+    <h2>Luật lần 2 (nâng cấp)</h2>
+    <ol class="rules">
+      <li>Cấm nói "gì cũng được". Cấm tuyệt đối. Mình sẽ biết.</li>
+      <li>Mình lo phần đưa đón. Bạn lo phần đẹp (có sẵn rồi).</li>
+      <li>Chụp ảnh chung ít nhất một tấm, mình sẽ cố không chớp mắt.</li>
+      <li>Lần này mình hứa kể ít chuyện dở hơn. (Không hứa chắc.)</li>
+    </ol>
+    <p class="sig">Ký tên: Anh Dương ✍️</p>
+  </section>
+</main>
+<canvas id="fx"></canvas>
+
+<script>
+const $ = id => document.getElementById(id);
+const yes = $("yes"), no = $("no");
+const WD = ["CN","T2","T3","T4","T5","T6","T7"];
+const WDL = ["Chủ Nhật","Thứ Hai","Thứ Ba","Thứ Tư","Thứ Năm","Thứ Sáu","Thứ Bảy"];
+const ymd = d => d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+
+/* ---------- nút Hông chạy trốn ---------- */
+let tries = 0;
+const faces = ["😺","😿","😾","🙀","😹","🥺","😻","😼"];
+const noText = ["Hông","Thiệt hông?","Lại nữa hả","Ơ kìa","Hụt rồi nè","Huhu đừng mà","Mèo buồn rồi","Nút này giận","Trượt nữa","Tha cho nút đi","Thôi bấm Màn 2 đi mà"];
+const msgs = [
+  "",
+  "Lần trước bạn đâu có chạy mất. Sao giờ nút chạy?",
+  "Bắt không được đâu. Mình tập luyện cả tuần nay rồi mà vẫn không bắt được.",
+  "Nút Màn 2 to lên rồi kìa. Hợp lý ha.",
+  "Mèo nói nhỏ: bạn muốn đi mà, chỉ là đang làm màu thôi.",
+  "Đừng làm mèo khóc. Mèo khóc ướt hết lông.",
+  "Nút Hông xin nghỉ việc. Lý do: quá cực.",
+  "Mình đang tập mặt dễ thương nè, nhìn mình đi 🥺",
+  "Bấm thêm lần nữa là mình tự mua trà sữa ăn mừng một mình luôn á.",
+  "Okeee, mình chờ. Mình có mang sạc dự phòng.",
+  "Nút Hông chóng mặt rồi, thương nó chút đi.",
+  "Ừ thì… mình sẽ không dỗi đâu. (Dỗi 10 phút thôi.)"
+];
+function move(el, avoid){
+  const w = el.offsetWidth, h = el.offsetHeight, m = 12, y = avoid.getBoundingClientRect();
+  let x, t, ok = false, n = 0;
+  while(!ok && n++ < 25){
+    x = m + Math.random()*Math.max(1, innerWidth - w - 2*m);
+    t = m + Math.random()*Math.max(1, innerHeight - h - 2*m);
+    ok = x > y.right+10 || x+w < y.left-10 || t > y.bottom+10 || t+h < y.top-10;
+  }
+  el.style.position = "fixed"; el.style.left = x+"px"; el.style.top = t+"px";
+}
+function dodge(){
+  tries++;
+  move(no, yes);
+  no.textContent = noText[Math.min(tries, noText.length-1)];
+  $("msg").textContent = msgs[Math.min(tries, msgs.length-1)];
+  $("face").textContent = faces[tries % faces.length];
+  const g = Math.min(tries, 16);
+  yes.style.fontSize = (1.1 + g*0.14)+"rem";
+  yes.style.padding = (11 + g*2)+"px "+(24 + g*4)+"px";
+  no.style.fontSize = Math.max(.6, 1 - tries*.03)+"rem";
+}
+["pointerenter","pointerdown","click"].forEach(ev => no.addEventListener(ev, e => { e.preventDefault(); dodge(); }));
+no.addEventListener("touchstart", e => { e.preventDefault(); dodge(); }, {passive:false});
+no.addEventListener("focus", () => { no.blur(); dodge(); });
+
+yes.addEventListener("click", () => {
+  document.body.classList.add("done");
+  no.style.display = "none";
+  scrollTo(0,0);
+  confetti();
+});
+
+/* ---------- chọn hoạt động / ngày / giờ ---------- */
+let act = "", date = "", time = "";
+const dp = $("dpick"), tp = $("tpick");
+function mark(sel, btn){ document.querySelectorAll(sel+" button").forEach(b => b.classList.toggle("on", b === btn)); }
+
+document.querySelectorAll("#acts button").forEach(b => b.addEventListener("click", () => { act = b.dataset.a; mark("#acts", b); }));
+
+const chips = $("dchips");
+const today = new Date();
+for(let i = 1; i <= 8; i++){
+  const d = new Date(today); d.setDate(today.getDate()+i);
+  const b = document.createElement("button");
+  b.type = "button";
+  b.dataset.d = ymd(d);
+  b.textContent = WD[d.getDay()]+" "+d.getDate()+"/"+(d.getMonth()+1);
+  b.addEventListener("click", () => { date = b.dataset.d; dp.value = date; mark("#dchips", b); });
+  chips.appendChild(b);
+}
+dp.min = ymd(new Date(today.getTime()+86400000));
+dp.addEventListener("input", () => { date = dp.value; mark("#dchips", null); });
+
+document.querySelectorAll("#tchips button").forEach(b => b.addEventListener("click", () => { time = b.dataset.t; tp.value = time; mark("#tchips", b); }));
+tp.addEventListener("input", () => { time = tp.value; mark("#tchips", null); });
+
+$("rand").addEventListener("click", () => {
+  const ab = [...document.querySelectorAll("#acts button")];
+  const db = [...document.querySelectorAll("#dchips button")];
+  const tb = [...document.querySelectorAll("#tchips button")];
+  const a = ab[Math.floor(Math.random()*ab.length)], d = db[Math.floor(Math.random()*db.length)], t = tb[Math.floor(Math.random()*tb.length)];
+  a.click(); d.click(); t.click();
+  $("err").textContent = "Mèo tung xúc xắc xong rồi 🎲 Ưng thì bấm Chốt, không ưng thì tung lại.";
+});
+
+/* ---------- chốt lịch ---------- */
+let when = null, answer = "";
+$("lock").addEventListener("click", () => {
+  if(!act){ $("err").textContent = "Chọn hoạt động trước đã nha 👆"; return; }
+  if(!date){ $("err").textContent = "Chọn ngày nữa nè 📅"; return; }
+  if(!time){ $("err").textContent = "Còn thiếu giờ nữa thôi 🕒"; return; }
+  $("err").textContent = "";
+  when = new Date(date+"T"+time);
+  const day = WDL[when.getDay()]+" "+when.getDate()+"/"+(when.getMonth()+1);
+  const hh = String(when.getHours()).padStart(2,"0")+":"+String(when.getMinutes()).padStart(2,"0");
+  $("tk").innerHTML = "<b>Làm gì:</b> "+act+"<br><b>Khi nào:</b> "+day+", "+hh+"<br><b>Đón:</b> mình qua đón bạn";
+  const h = when.getHours();
+  let j = "Chốt rồi nha, không rút lại được đâu. 📌";
+  if(h < 11) j = "Đi buổi sáng luôn hả? Bạn chăm thế. Mình bao bữa sáng. 🥐";
+  else if(h >= 21) j = "Đi khuya vậy luôn? Mèo thức cùng bạn. 🌙";
+  $("tj").textContent = j;
+  answer = "Ok màn 2 nha! "+act+", "+day+" lúc "+hh+". Mình đợi nè 💗 – Anh Dương";
+  $("ticket").style.display = "block";
+  $("ticket").scrollIntoView({behavior:"smooth", block:"center"});
+  confetti();
+});
+$("copy").addEventListener("click", async () => {
+  try { await navigator.clipboard.writeText(answer); $("copy").textContent = "Chép xong! Gửi mình đi nè 💌"; }
+  catch(e){ $("note").textContent = answer+" (Chép câu này gửi cho mình nha!)"; }
+});
+$("ics").addEventListener("click", () => {
+  const f = d => d.getFullYear()+String(d.getMonth()+1).padStart(2,"0")+String(d.getDate()).padStart(2,"0")+"T"+String(d.getHours()).padStart(2,"0")+String(d.getMinutes()).padStart(2,"0")+"00";
+  const end = new Date(when.getTime()+2*3600000);
+  const url = "https://calendar.google.com/calendar/render?action=TEMPLATE&text="+encodeURIComponent("Hẹn hò lần 2 💗")+"&details="+encodeURIComponent(act)+"&dates="+f(when)+"/"+f(end);
+  const w = window.open(url, "_blank", "noopener");
+  if(!w) $("note").textContent = "Trình duyệt chặn cửa sổ mới rồi, bạn chụp màn hình vé nha 📸";
+});
+
+/* ---------- hiệu ứng ---------- */
+function confetti(){
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const c = $("fx"), ctx = c.getContext("2d");
+  c.width = innerWidth; c.height = innerHeight;
+  const em = ["💗","✨","🧋","🌸","⭐"];
+  const ps = Array.from({length:60}, () => ({x:innerWidth/2, y:innerHeight*.6, vx:(Math.random()-.5)*14, vy:-Math.random()*15-4, s:18+Math.random()*16, e:em[Math.floor(Math.random()*em.length)]}));
+  let f = 0;
+  (function tick(){
+    ctx.clearRect(0,0,c.width,c.height);
+    ps.forEach(p => { p.vy += .28; p.x += p.vx; p.y += p.vy; ctx.font = p.s+"px serif"; ctx.fillText(p.e, p.x, p.y); });
+    if(++f < 200) requestAnimationFrame(tick); else ctx.clearRect(0,0,c.width,c.height);
+  })();
+}
+if(!matchMedia("(prefers-reduced-motion: reduce)").matches){
+  setInterval(() => {
+    const s = document.createElement("span");
+    s.className = "fl";
+    s.textContent = ["💗","♡","✨","🧋"][Math.floor(Math.random()*4)];
+    s.style.left = Math.random()*100+"vw";
+    s.style.fontSize = (14+Math.random()*16)+"px";
+    s.style.animationDuration = (9+Math.random()*6)+"s";
+    document.body.appendChild(s);
+    setTimeout(() => s.remove(), 16000);
+  }, 1500);
+}
+</script>
+</body>
+</html>
